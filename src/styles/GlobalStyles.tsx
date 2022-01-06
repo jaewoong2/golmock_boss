@@ -1,7 +1,10 @@
 import { Global, css } from "@emotion/react";
 import React from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const style = css`
+  @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script:wght@510&family=Lobster&family=Nanum+Gothic&family=Noto+Sans+KR:wght@300&family=Shippori+Antique&display=swap");
   /* http://meyerweb.com/eric/tools/css/reset/ v5.0.1 | 20191019 License: none (public domain) */
   html,
   body,
@@ -137,7 +140,6 @@ const style = css`
   html,
   body,
   #root {
-    #413f3f9e
     width: 100%;
     height: 100%;
   }

@@ -3,9 +3,10 @@ import styled from "@emotion/styled";
 type containerType = { width: string; height: string };
 
 const ImageContainerStyle = {
-  Container: styled.figure<containerType>`
+  Container: styled.div<containerType>`
     width: ${(props) => props.width};
     height: ${(props) => props.height};
+
     position: relative;
     user-select: none;
 
@@ -36,16 +37,15 @@ const ImageContainerStyle = {
   `,
 
   Image: styled.img`
-    width: auto;
-    height: 100%;
+    width: inherit;
+    height: inherit;
     max-width: 100%;
-    max-height: 100%;
-    user-select: none;
+    max-height: 900px;
 
-    object-fit: cover;
+    user-select: none;
   `,
 
-  Caption: styled.caption<{ fontSize: string }>`
+  Caption: styled.div<{ fontSize: string }>`
     position: absolute;
     font-size: ${(props) => props.fontSize};
     bottom: 20%;

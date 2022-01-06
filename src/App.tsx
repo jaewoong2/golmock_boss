@@ -1,14 +1,19 @@
 import styled from "@emotion/styled";
 import React from "react";
+import Banner from "./components/Banner";
+import Gallery from "./components/Gallery";
 import ImageContainer from "./components/ImageContaienr";
 import Layout from "./components/Layout";
 import List from "./components/List";
+import Item from "./components/Slider/Item";
+import { theme } from "./styles/theme";
 
 const ImageWrapper = styled.div`
-  width: 99%;
+  width: 100%;
   height: 100%;
+  min-height: 550px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   position: relative;
 
@@ -48,24 +53,37 @@ const ImageWrapper = styled.div`
 const App = () => {
   return (
     <Layout>
-      <List
-        listItems={[
-          { value: "HOME" },
-          { value: "소개" },
-          { value: "안내사항" },
-          { value: "골목대장" },
+      <Banner
+        width="100%"
+        height="30px"
+        backgroundColor={theme.color.listBackground}
+      >
+        용인시 스마트도시 골목대장
+      </Banner>
+      <Gallery
+        itemHeight="450px"
+        items={[
+          { value: "asdasd" },
+          { value: "asdasd" },
+          { value: "asdasd" },
+          { value: "asdasd" },
+          { value: "asdasd" },
+          { value: "asdasd" },
+          { value: "asdasd" },
         ]}
+        column={5}
       />
-      <ImageWrapper>
+
+      {/* <ImageWrapper>
         <ImageContainer
           caption="보정동 카페거리"
           fontSize="42px"
           width="auto"
-          height="97%"
+          height="100%"
           src="images/cafe.jpg"
           alt="보정동"
         />
-      </ImageWrapper>
+      </ImageWrapper> */}
     </Layout>
   );
 };

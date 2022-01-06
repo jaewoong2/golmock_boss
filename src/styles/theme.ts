@@ -9,8 +9,8 @@ export const theme: themeType = {
         hover: `#e8e8e8`,
         fontWhite: "#fff",
         fontBlack: "#000",
-        background: '#D9D7F1',
-        listBackground: '#413f3f9e',
+        background: '#FFF8F3',
+        listBackground: '#A3E4DB',
     },
     border: {
         primary: `1px solid #f3f3f3`,
