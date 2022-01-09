@@ -1,8 +1,10 @@
 import styled from "@emotion/styled";
 import React from "react";
 import Banner from "./components/Banner";
+import Card from "./components/Card";
 import Gallery from "./components/Gallery";
 import ImageContainer from "./components/ImageContaienr";
+import Info from "./components/Info";
 import Layout from "./components/Layout";
 import List from "./components/List";
 import Item from "./components/Slider/Item";
@@ -60,30 +62,16 @@ const App = () => {
       >
         용인시 스마트도시 골목대장
       </Banner>
-      <Gallery
-        itemHeight="450px"
-        items={[
-          { value: "asdasd" },
-          { value: "asdasd" },
-          { value: "asdasd" },
-          { value: "asdasd" },
-          { value: "asdasd" },
-          { value: "asdasd" },
-          { value: "asdasd" },
+      <Item />
+      <Info />
+      <Card
+        cards={[
+          { title: "신세계 백화점", image: "" },
+          { title: "수지레스피아", image: "" },
+          { title: "죽전패션타운", image: "" },
+          { title: "X파크", image: "" },
         ]}
-        column={5}
       />
-
-      {/* <ImageWrapper>
-        <ImageContainer
-          caption="보정동 카페거리"
-          fontSize="42px"
-          width="auto"
-          height="100%"
-          src="images/cafe.jpg"
-          alt="보정동"
-        />
-      </ImageWrapper> */}
     </Layout>
   );
 };

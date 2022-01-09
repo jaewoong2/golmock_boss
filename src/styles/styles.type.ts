@@ -33,4 +33,7 @@ export type themeType = {
     color: colorType;
     border: borderType;
     size: sizeType
+    font: {
+        primary: string;
+    }
 }

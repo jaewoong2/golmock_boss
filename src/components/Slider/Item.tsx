@@ -10,10 +10,28 @@ interface itemsProps {
 const SliderItem = styled.div`
   width: 100%;
   height: auto;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  &:focus {
+    outline: none;
+  }
+
   img {
-    max-width: 100%;
+    max-width: 90%;
     max-height: 500px;
     height: auto;
+  }
+
+  .item-description {
+    position: absolute;
+    bottom: 25%;
+    color: ${({ theme }) => theme.color.fontWhite};
+    background-color: #000000af;
+    padding: 10px;
+    font-family: "Nanum Gothic", sans-serif;
   }
 `;
 
@@ -23,11 +41,11 @@ const items: itemsProps[] = [
     name: "이미지01",
   },
   {
-    item: "images/cafe.jpg",
+    item: "images/bojung1.jpg",
     name: "이미지02",
   },
   {
-    item: "images/cafe.jpg",
+    item: "images/bojung.jpg",
     name: "이미지03",
   },
 ];
@@ -38,6 +56,7 @@ const Item = () => {
       {items.map((item, index) => (
         <SliderItem key={index}>
           <img src={item.item} alt={item.name} />
+          <div className="item-description">용인시 보정동 카페거리</div>
         </SliderItem>
       ))}
     </Slick>

@@ -27,5 +27,8 @@ export const theme: themeType = {
             large: "42px",
             title: "60px",
         }
+    },
+    font: {
+        primary: `"Nanum Gothic", sans-serif`,
     }
 }

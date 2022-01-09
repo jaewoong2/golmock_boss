@@ -1,7 +1,5 @@
 import { Global, css } from "@emotion/react";
 import React from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const style = css`
   @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script:wght@510&family=Lobster&family=Nanum+Gothic&family=Noto+Sans+KR:wght@300&family=Shippori+Antique&display=swap");
@@ -142,6 +140,11 @@ const style = css`
   #root {
     width: 100%;
     height: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    * {
+      font-size: 14px !important;
+    }
   }
 `;
 

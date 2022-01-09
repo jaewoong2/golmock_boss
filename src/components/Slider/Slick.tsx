@@ -38,12 +38,12 @@ function Slick({
       centerMode: true,
       slidesToShow: 1,
       autoplay: Boolean(autoplay),
-      autoplaySpeed: typeof autoplay === "boolean" ? 3000 : autoplay,
+      autoplaySpeed: typeof autoplay === "boolean" ? 2000 : autoplay,
     }),
     [autoplay, loop, speed]
   );
   return (
-    <SlideWrapper className={className}>
+    <SlideWrapper style={{ overflow: "hidden" }} className={className}>
       <Slider {...settings}>{children}</Slider>
     </SlideWrapper>
   );

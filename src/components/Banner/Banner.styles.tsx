@@ -5,6 +5,7 @@ const BannerStyle = {
     display: flex;
     justify-content: center;
   `,
+
   Bar: styled.div<{
     width: string;
     height: string;
@@ -19,7 +20,7 @@ const BannerStyle = {
     color: ${({ theme }) => theme.color.fontBlack};
     font-weight: 600;
     font-family: "Nanum Gothic", sans-serif;
-    border-radius: 20px;
+    margin-bottom: 10px;
   `,
 };
 
