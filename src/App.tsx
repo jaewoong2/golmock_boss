@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-import React from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
 import Banner from "./components/Banner";
 import Card from "./components/Card";
 import Gallery from "./components/Gallery";
@@ -9,6 +10,45 @@ import Layout from "./components/Layout";
 import List from "./components/List";
 import Item from "./components/Slider/Item";
 import { theme } from "./styles/theme";
+
+const MapContainer = styled.div`
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+
+  &::after {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: -30px;
+    left: 5px;
+    content: "찾아가기";
+    font-family: ${({ theme }) => theme.font.primary};
+    font-weight: 600;
+    color: #81ca9df6;
+  }
+
+  &::before {
+    position: absolute;
+    width: 97%;
+    height: 3px;
+    top: -10px;
+    left: 2%;
+    content: "";
+    background-color: #81ca9d9d;
+    font-family: ${({ theme }) => theme.font.primary};
+    border-radius: 50px;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.size.device.tablet}) {
+    width: 90%;
+    margin-left: 3%;
+  }
+`;
 
 const ImageWrapper = styled.div`
   width: 100%;
@@ -66,12 +106,16 @@ const App = () => {
       <Info />
       <Card
         cards={[
-          { title: "신세계 백화점", image: "" },
-          { title: "수지레스피아", image: "" },
-          { title: "죽전패션타운", image: "" },
-          { title: "X파크", image: "" },
+          { title: "신세계 백화점", image: "images/sinsae.jpg" },
+          { title: "수지레스피아", image: "images/suji.jpg" },
+          { title: "죽전패션타운", image: "images/fasion.jpg" },
+          { title: "X파크", image: "images/xpark.jpg" },
         ]}
       />
+
+      <MapContainer className="map-container">
+        <img alt="지도" src="images/jido.jpg" />
+      </MapContainer>
     </Layout>
   );
 };

@@ -12,7 +12,7 @@ const Card: React.FC<CardProps> = ({ cards }) => {
         {cards.map(({ title, image }) => (
           <div className="card-title">
             <img src={image} alt={title} />
-            <div>{title}</div>
+            <div className="title">{title}</div>
           </div>
         ))}
       </div>

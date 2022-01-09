@@ -18,13 +18,27 @@ const CardStyles = {
       .card-title {
         width: 100%;
         display: flex;
-        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
 
-        height: 300px;
         border-radius: 8px;
-        margin: 10px;
+        margin: 0 10px 10px 10px;
         box-shadow: 1px 1px 10px #0000001c;
-        background-color: white;
+        background-color: ${({ theme }) => theme.color.fontWhite};
+
+        img {
+          margin-top: 10px;
+          width: 99%;
+          height: auto;
+        }
+
+        .title {
+          margin-top: 20px;
+          font-family: ${({ theme }) => theme.font.primary};
+          padding-bottom: 20px;
+          font-weight: 600;
+        }
       }
 
       &::after {
